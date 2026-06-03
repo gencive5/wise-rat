@@ -27,9 +27,8 @@
 .hero {
   position: relative;
 
-  .base,
-  .framework,
-  .vite {
+  .base
+ {
     inset-inline: 0;
     margin: 0 auto;
   }
@@ -40,27 +39,6 @@
     z-index: 0;
   }
 
-  .framework,
-  .vite {
-    position: absolute;
-  }
-
-  .framework {
-    z-index: 1;
-    top: 34px;
-    height: 28px;
-    transform: perspective(2000px) rotateZ(300deg) rotateX(44deg) rotateY(39deg)
-      scale(1.4);
-  }
-
-  .vite {
-    z-index: 0;
-    top: 107px;
-    height: 26px;
-    width: auto;
-    transform: perspective(2000px) rotateZ(300deg) rotateX(40deg) rotateY(39deg)
-      scale(0.8);
-  }
 }
 
 #center {
@@ -90,11 +68,6 @@
     }
   }
 
-  .icon {
-    margin-bottom: 16px;
-    width: 22px;
-    height: 22px;
-  }
 
   @media (max-width: 1024px) {
     flex-direction: column;
@@ -118,9 +91,6 @@
   gap: 8px;
   margin: 32px 0 0;
 
-  .logo {
-    height: 18px;
-  }
 
   a {
     color: var(--text-h);
@@ -160,13 +130,6 @@
   }
 }
 
-#spacer {
-  height: 88px;
-  border-top: 1px solid var(--border);
-  @media (max-width: 1024px) {
-    height: 48px;
-  }
-}
 
 .ticks {
   position: relative;
