@@ -4,6 +4,7 @@ import './App.css'
 
 function App() {
 
+// fortune telling
 const [fortune, setFortune] = useState("")
 
 const fortunes = [
@@ -42,12 +43,12 @@ const askFortune = () => {
         <div id="docs">
           <ul>
             <li>
-              <a href="https://vite.dev/" target="_blank">
+              <a href="/fonts/myriadpro.woff2"  download>
                 download mr rat font
               </a>
             </li>
             <li>
-              <a href="https://react.dev/" target="_blank">
+              <a href="https://instagram.com/gencive5" target="_blank"> 
                 instagram
               </a>
             </li>
