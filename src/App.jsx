@@ -14,7 +14,6 @@ const fortunes = [
 const askFortune = () => {
   const randomFortune = fortunes[Math.floor(Math.random() * fortunes.length)];
   setFortune(randomFortune);
-  console.log(randomFortune)
 }
   
 
@@ -44,12 +43,12 @@ const askFortune = () => {
           <ul>
             <li>
               <a href="https://vite.dev/" target="_blank">
-                Explore Vite
+                download mr rat font
               </a>
             </li>
             <li>
               <a href="https://react.dev/" target="_blank">
-                Learn more
+                instagram
               </a>
             </li>
           </ul>
