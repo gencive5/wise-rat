@@ -25,7 +25,7 @@ const askFortune = () => {
           <img src={rat} className="base" width="200" height="210" alt="rat" />
         </div>
         <div>
-          <p>{setFortune}</p>
+          <p className="fortune1">{fortune}</p>
      <button
           type="button"
           className="counter"
