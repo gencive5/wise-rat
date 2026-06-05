@@ -4,16 +4,17 @@
   font-display: block;
 }
 
-.counter {
-  font-size: 16px;
+.ask {
+  font-size: 1.1rem;
   font-family: 'myriad', sans-serif;
   padding: 5px 10px;
   border-radius: 5px;
-  color: var(--accent);
-  background: var(--accent-bg);
+  color: white;
+  background: black;
   border: 2px solid transparent;
   transition: border-color 0.3s;
   margin-bottom: 24px;
+  cursor: pointer;
 
   &:hover {
     border-color: var(--accent-border);
@@ -24,7 +25,7 @@
   }
 }
 
-.hero {
+.rat-img {
   position: relative;
 
   .base
@@ -55,7 +56,7 @@
   }
 }
 
-#next-steps {
+#links {
   display: flex;
   text-align: left;
 
@@ -75,7 +76,7 @@
 }
 
 
-#next-steps ul {
+#links ul {
   list-style: none;
   padding: 0;
   display: flex;
@@ -84,24 +85,20 @@
 
 
   a {
-    color: var(--text-h);
+    color: #c084fc;
     font-size: 16px;
     border-radius: 6px;
-    background: var(--social-bg);
     display: flex;
     padding: 6px 12px;
     align-items: center;
     gap: 8px;
-    text-decoration: none;
-    transition: box-shadow 0.3s;
+    text-decoration: underline;
+    /* transition: box-shadow 0.3s;
 
     &:hover {
       box-shadow: var(--shadow);
-    }
-    .button-icon {
-      height: 18px;
-      width: 18px;
-    }
+    } */
+
   }
 
 
@@ -124,12 +121,25 @@
 
 
 .fortune1 {
-  font-size: 16px;
+  height: 2rem;
+  font-size: 2rem;
   font-family: 'myriad', sans-serif;
   padding: 5px 10px;
   border-radius: 5px;
-  color: var(--accent);
-  background: var(--accent-bg);
+  color: #10069F;
+ 
+  border: 2px solid transparent;
+  transition: border-color 0.3s;
+  margin-bottom: 24px;
+}
+
+.fortune2 {
+  height: 2rem;
+  font-size: 2rem;
+  font-family: 'myriad', sans-serif;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: magenta;
   border: 2px solid transparent;
   transition: border-color 0.3s;
   margin-bottom: 24px;

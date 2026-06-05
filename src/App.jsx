@@ -21,15 +21,15 @@ const askFortune = () => {
   return (
     <>
       <section id="center">
-        <div className="hero">
+        <div className="rat-img">
           <img src={rat} className="base" width="200" height="210" alt="rat" />
         </div>
         <div>
           <p className="fortune1">{fortune}</p>
-          <p className="fortune1">{fortune}</p>
+          <p className="fortune2">{fortune}</p>
      <button
           type="button"
-          className="counter"
+          className="ask"
           onClick={askFortune} 
         >
           Ask Mr Rat 
@@ -39,8 +39,8 @@ const askFortune = () => {
       </section>
 
 
-      <section id="next-steps">
-        <div id="docs">
+      <section id="links">
+        <div>
           <ul>
             <li>
               <a href="/fonts/myriadpro.woff2"  download>
