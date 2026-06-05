@@ -1,10 +1,22 @@
 import { useState } from 'react'
-import fortune from './fortune'
 import rat from './assets/ratfront.png'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+
+const [fortune, setFortune] = useState("")
+
+const fortunes = [
+  "yes", "no", "maybe", "idk", "ummmmm", "uhhhhhhh", "perhaps", "why not", "What am I supposed to do", "sure", "Ew", "eh",
+  "yup", "Nah", "ok", "definitely", "absolutely not", "...", "yay", "nope", "I guess", "I think that's fine", "oooof", "¯\(ツ)/¯"
+]
+
+const askFortune = () => {
+  const randomFortune = fortunes[Math.floor(Math.random() * fortunes.length)];
+  setFortune(randomFortune);
+  console.log(randomFortune)
+}
+  
 
   return (
     <>
@@ -13,18 +25,16 @@ function App() {
           <img src={rat} className="base" width="200" height="210" alt="rat" />
         </div>
         <div>
-          <h1>Get started</h1>
-          <p>
-            Edit and save to test
-          </p>
-        </div>
-        <button
+          <p>{setFortune}</p>
+     <button
           type="button"
           className="counter"
-          onClick={() => setCount((count) => count + 1)}
+          onClick={askFortune} 
         >
-          Ask Mr Rat {count}
-        </button>
+          Ask Mr Rat 
+      </button>
+        </div>
+       
       </section>
 
 
