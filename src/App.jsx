@@ -26,6 +26,7 @@ const askFortune = () => {
         </div>
         <div>
           <p className="fortune1">{fortune}</p>
+          <p className="fortune1">{fortune}</p>
      <button
           type="button"
           className="counter"
