@@ -41,7 +41,7 @@ const askFortune = () => {
 
 
       <section id="links">
-        <div>
+  
           <ul>
             <li>
               <a href="/fonts/myriadpro.woff2"  download>
@@ -54,7 +54,6 @@ const askFortune = () => {
               </a>
             </li>
           </ul>
-        </div>
         
       </section>
       </container>
