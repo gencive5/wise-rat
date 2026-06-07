@@ -20,7 +20,8 @@ const askFortune = () => {
 
   return (
     <>
-      <section id="center">
+    <container className="container">
+      {/* <section id="center"> */}
         <div className="rat-img">
           <img src={rat} className="base" width="200" height="210" alt="rat" />
         </div>
@@ -36,7 +37,7 @@ const askFortune = () => {
       </button>
         </div>
        
-      </section>
+      {/* </section> */}
 
 
       <section id="links">
@@ -56,6 +57,7 @@ const askFortune = () => {
         </div>
         
       </section>
+      </container>
 
 
     </>
