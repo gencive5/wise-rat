@@ -43,28 +43,21 @@
 .rat-img {
   position: relative;
   z-index: 500;
-  margin-top: 2rem;
-
-  .base
- {
-    inset-inline: 0;
-    margin: 0 auto;
-  }
-
-  .base {
-    width: 170px;
-    position: relative;
-    z-index: 500;
-  }
-
+  margin-top: 1rem;
 }
 
+.rat-img .base {
+  width: 170px;
+  position: relative;
+  z-index: 500;
+  margin: 0 auto;
+}
 
 
 #links {
   display: flex;
   text-align: center;
-  width: 100vw;
+  width: 100%;
 
   & > div {
     flex: 1 1 0;
@@ -79,16 +72,15 @@
   padding: 0;
   display: flex;
   gap: 8px;
-  margin: 32px 0 0;
-
 
   a {
     color: #e980fc;
-    font-size: 16px;
+    font-family: 'myriad', sans-serif;
+    font-size: 1rem;
     display: flex;
-    padding: 6px 12px;
-    align-items: center;
+    padding: 6px;
     gap: 8px;
+    justify-content: space-between;
     text-decoration: underline;
 
     &:hover {
@@ -98,7 +90,7 @@
   }
 
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
 
     li {
       flex: 1 1 calc(50% - 8px);
@@ -123,6 +115,9 @@
   margin-bottom: 3rem;
   letter-spacing: -1rem;
   z-index: 10;
+      @media (max-width: 1024px) {
+    font-size: 6rem;
+  }
 }
 
 .fortune2 {
@@ -132,4 +127,7 @@
   padding: 1rem 2rem;
   color: magenta;
   margin-bottom: 0.5rem;
+    @media (max-width: 1024px) {
+    font-size: 1rem;
+  }
 }
