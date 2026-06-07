@@ -21,6 +21,7 @@ const askFortune = () => {
   return (
     <>
     <container className="container">
+      <div className='main-content'>
         <div className="rat-img">
           <img src={rat} className="base" width="200" height="210" alt="rat" />
         </div>
@@ -34,6 +35,7 @@ const askFortune = () => {
         >
           Ask Mr Rat 
       </button>
+        </div>
         </div>
        
 

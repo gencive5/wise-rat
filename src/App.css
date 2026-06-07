@@ -12,14 +12,20 @@
 
 .container {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   gap: 25px;
-  place-content: center;
-  place-items: center;
-  flex-grow: 1;
+}
+
+.main-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1; 
+  gap: 25px;
 }
 
 .ask {
@@ -30,7 +36,7 @@
   background: black;
   border: 2px solid transparent;
   transition: border-color 0.3s;
-  margin-top: 1rem;
+  margin-top: 3rem;
   align-items: flex-end;
   
   cursor: pointer;
@@ -107,22 +113,24 @@
 
 
 .fortune1 {
-  height: 2rem;
+
+  width: 100%;
+   white-space: nowrap; 
   font-size: 10rem;
   font-family: 'mr-rat';
   padding: 1rem 2rem;
   color: #10069F;
-  margin-top: 2rem;
+  margin-top: 0.1rem;
   margin-bottom: 3rem;
   letter-spacing: -1rem;
   z-index: 10;
       @media (max-width: 1024px) {
-    font-size: 6rem;
+    font-size: 8rem;
   }
 }
 
 .fortune2 {
-  height: 2rem;
+
   font-size: 1.5rem;
   font-family: 'myriad', sans-serif;
   padding: 1rem 2rem;
