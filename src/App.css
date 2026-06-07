@@ -65,55 +65,48 @@
   display: flex;
   text-align: center;
   width: 100%;
+  padding: 0 1rem; 
+  box-sizing: border-box;
 
   & > div {
     flex: 1 1 0;
     padding-bottom: 2rem;
   }
-
 }
-
 
 #links ul {
   list-style: none;
   padding: 0;
+  margin: 0;
   display: flex;
+  justify-content: space-between; 
+  gap: 1rem; 
+}
+
+#links ul li {
+  flex: 0 1 auto;
+}
+
+#links ul a {
+  color: #e980fc;
+  font-family: 'myriad', sans-serif;
+  font-size: 1rem;
+  display: flex;
+  padding: 6px;
   gap: 8px;
+  justify-content: center;
+  text-decoration: underline;
+  white-space: nowrap; 
 
-  a {
-    color: #e980fc;
-    font-family: 'myriad', sans-serif;
-    font-size: 1rem;
-    display: flex;
-    padding: 6px;
-    gap: 8px;
-    justify-content: space-between;
-    text-decoration: underline;
-
-    &:hover {
-      color: #574dec;
-    } 
-
-  }
-
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-    li {
-      flex: 1 1 calc(50% - 8px);
-    }
-
-    a {
-      width: 100%;
-      justify-content: center;
-      box-sizing: border-box;
+  &:hover {
+    color: #574dec;
   }
 }
 
 
 
 .fortune1 {
-
+  height: 3rem;
   width: 100%;
    white-space: nowrap; 
   font-size: 10rem;
@@ -130,10 +123,11 @@
 }
 
 .fortune2 {
-
+  height: 5rem;
   font-size: 1.5rem;
   font-family: 'myriad', sans-serif;
   padding: 1rem 2rem;
   color: magenta;
+  margin-top: auto;
   margin-bottom: 0.5rem;
 }
