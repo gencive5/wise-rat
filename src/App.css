@@ -4,6 +4,12 @@
   font-display: block;
 }
 
+@font-face {
+  font-family: "mr-rat";
+  src: url("MISTER-RAT.woff2") format("woff2");
+  font-display: swap;
+}
+
 .ask {
   font-size: 1.1rem;
   font-family: 'myriad', sans-serif;
@@ -13,7 +19,8 @@
   background: black;
   border: 2px solid transparent;
   transition: border-color 0.3s;
-  margin-bottom: 24px;
+  margin-top: 1rem;
+  
   cursor: pointer;
 
   &:hover {
@@ -27,6 +34,7 @@
 
 .rat-img {
   position: relative;
+  z-index: 500;
 
   .base
  {
@@ -37,7 +45,7 @@
   .base {
     width: 170px;
     position: relative;
-    z-index: 0;
+    z-index: 500;
   }
 
 }
@@ -85,24 +93,22 @@
 
 
   a {
-    color: #c084fc;
+    color: #e980fc;
     font-size: 16px;
-    border-radius: 6px;
     display: flex;
     padding: 6px 12px;
     align-items: center;
     gap: 8px;
     text-decoration: underline;
-    /* transition: box-shadow 0.3s;
 
     &:hover {
-      box-shadow: var(--shadow);
-    } */
+      color: #574dec;
+    } 
 
   }
 
 
-    margin-top: 20px;
+    /* margin-top: 1rem; */
     flex-wrap: wrap;
     justify-content: center;
 
@@ -122,25 +128,21 @@
 
 .fortune1 {
   height: 2rem;
-  font-size: 2rem;
-  font-family: 'myriad', sans-serif;
-  padding: 5px 10px;
-  border-radius: 5px;
+  font-size: 10rem;
+  font-family: 'mr-rat';
+  padding: 1rem 2rem;
   color: #10069F;
- 
-  border: 2px solid transparent;
-  transition: border-color 0.3s;
-  margin-bottom: 24px;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  letter-spacing: -1rem;
+  z-index: 10;
 }
 
 .fortune2 {
   height: 2rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-family: 'myriad', sans-serif;
-  padding: 5px 10px;
-  border-radius: 5px;
+  padding: 1rem 2rem;
   color: magenta;
-  border: 2px solid transparent;
-  transition: border-color 0.3s;
-  margin-bottom: 24px;
+  margin-bottom: 1rem;
 }
