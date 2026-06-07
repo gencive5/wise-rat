@@ -9,7 +9,7 @@ const [fortune, setFortune] = useState("")
 
 const fortunes = [
   "yes", "no", "maybe", "idk", "ummmmm", "uhhhhhhh", "perhaps", "why not", "What am I supposed to do", "sure", "Ew", "eh",
-  "yup", "Nah", "ok", "definitely", "absolutely not", "...", "yay", "nope", "I guess", "I think that's fine", "oooof", "¯\(ツ)/¯"
+  "yup", "Nah", "ok", "definitely", "absolutely not", "...", "yay", "nope", "I guess", "I think that's fine", "oooof", "¯(ツ)/¯"
 ]
 
 const askFortune = () => {
