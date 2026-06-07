@@ -101,6 +101,9 @@
   &:hover {
     color: #574dec;
   }
+        @media (max-width: 1024px) {
+    font-size: 0.8rem;
+  }
 }
 
 
