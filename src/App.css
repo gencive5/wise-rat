@@ -108,6 +108,9 @@
   margin-bottom: 3rem;
   letter-spacing: -1rem;
   z-index: 10;
+  transform: translate3d(0,0,0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
       @media (max-width: 1024px) {
     font-size: 8rem;
   }

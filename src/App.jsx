@@ -50,7 +50,7 @@ const askFortune = () => {
             </li>
             <li>
               <a href="https://instagram.com/gencive5" target="_blank"> 
-                insta\gram
+                instagram
               </a>
             </li>
           </ul>
