@@ -114,13 +114,16 @@
   margin-bottom: 3rem;
   letter-spacing: -2rem;
   z-index: 10;
-  transform: translate3d(0,0,0);
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
       @media (max-width: 1024px) {
     font-size: 12rem;
     letter-spacing: -2rem;
   }
+}
+
+.fortune1.font-ready {
+  transform: translate3d(0,0,0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .fortune2 {
@@ -132,5 +135,10 @@
   margin-top: auto;
   margin-bottom: 0.5rem;
   z-index: 20;
+}
+
+.fortune2.font-ready {
   transform: translate3d(0,0,0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
