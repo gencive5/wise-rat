@@ -124,6 +124,13 @@
   transform: translate3d(0,0,0);
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
+outline: 1px solid transparent;
+  animation: ghostFix 0.001s forwards;
+}
+
+@keyframes ghostFix {
+  0% { letter-spacing: -2rem; }
+  100% { letter-spacing: -2rem; }
 }
 
 .fortune2 {
