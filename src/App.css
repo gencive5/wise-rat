@@ -98,7 +98,7 @@
   height: 3rem;
   width: 100%;
   white-space: nowrap; 
-  font-size: 10rem;
+  font-size: 14rem;
   font-family: 'mr-rat';
   text-align: center;
   box-sizing: border-box;
@@ -108,7 +108,7 @@
   margin-bottom: 3rem;
   letter-spacing: -1rem;
   z-index: 10;
-  transform: translate3d(0,0,0);
+  will-change: contents;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
       @media (max-width: 1024px) {
@@ -124,4 +124,5 @@
   color: magenta;
   margin-top: auto;
   margin-bottom: 0.5rem;
+  z-index: 20;
 }
