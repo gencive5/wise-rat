@@ -44,7 +44,7 @@ const askFortune = () => {
   
           <ul>
             <li>
-              <a href="/fonts/myriadpro.woff2"  download>
+              <a href="/fonts/mr-rat.zip"  download>
                 download mr rat font
               </a>
             </li>
