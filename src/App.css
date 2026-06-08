@@ -13,10 +13,12 @@
 .container {
   height: 100svh;
   width: 100%;
-  overflow: hidden;
+  overflow-y: hidden;
+  overflow-x: visible;
   display: flex;
   flex-direction: column;
   gap: 25px;
+  overscroll-behavior: none;
 }
 
 .main-content{
@@ -63,7 +65,7 @@
 
 #links {
   width: 100%;
-  padding: 0 1rem 2rem 1rem;
+  padding: 0 20rem 2rem 20rem;
   box-sizing: border-box;
 }
 
@@ -91,6 +93,10 @@
   #links a {
     font-size: 0.8rem;
   }
+
+  #links {
+  padding: 0 1rem 2rem 1rem;
+}
 }
 
 
@@ -104,15 +110,16 @@
   box-sizing: border-box;
   padding: 1rem 2rem;
   color: #10069F;
-  margin-top: 0.1rem;
+  margin-top: 0rem;
   margin-bottom: 3rem;
-  letter-spacing: -1rem;
+  letter-spacing: -2rem;
   z-index: 10;
   transform: translate3d(0,0,0);
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
       @media (max-width: 1024px) {
-    font-size: 8rem;
+    font-size: 12rem;
+    letter-spacing: -2rem;
   }
 }
 
