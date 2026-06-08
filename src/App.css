@@ -117,6 +117,7 @@
       @media (max-width: 1024px) {
     font-size: 12rem;
     letter-spacing: -2rem;
+    margin-left: -1rem;
   }
 }
 
