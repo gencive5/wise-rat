@@ -111,6 +111,8 @@
   display: block;
   padding: 1rem 2rem;
   color: #10069F;
+  background: transparent;
+  box-shadow: 0 0 0 200px transparent;
 
   margin-bottom: 3rem; 
   letter-spacing: -2rem;
@@ -120,7 +122,6 @@
     letter-spacing: -2rem;
     margin-left: -1rem;
   }
-  background-color: transparent;
 }
 
 
