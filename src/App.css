@@ -119,20 +119,9 @@
     letter-spacing: -2rem;
     margin-left: -1rem;
   }
+  background-color: transparent;
 }
 
-.fortune1.font-ready {
-  transform: translate3d(0,0,0);
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-outline: 1px solid transparent;
-  animation: ghostFix 0.001s forwards;
-}
-
-@keyframes ghostFix {
-  0% { letter-spacing: -2rem; }
-  100% { letter-spacing: -2rem; }
-}
 
 .fortune2 {
   height: 5rem;
@@ -143,10 +132,4 @@ outline: 1px solid transparent;
   margin-top: auto;
   margin-bottom: 0.5rem;
   z-index: 20;
-}
-
-.fortune2.font-ready {
-  transform: translate3d(0,0,0);
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
 }

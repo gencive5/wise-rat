@@ -6,15 +6,7 @@ function App() {
 
 // fortune telling
 const [fortune, setFortune] = useState("")
-const [fontReady, setFontReady] = useState(false)
 
-  useEffect(() => {
-    const font = new FontFace('mr-rat', 'url(MISTER-RAT.woff2) format("woff2")')
-    font.load().then(() => {
-      document.fonts.add(font)
-      setFontReady(true)
-    }).catch(err => console.log('Font loading error:', err))
-  }, [])
 
 const fortunes = [
   "yes", "no", "maybe", "idk", "ummmmm", "uhhhhhhh", "perhaps", "why not", "What am I supposed to do", "sure", "Ew", "eh",
