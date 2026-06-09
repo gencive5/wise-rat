@@ -106,12 +106,13 @@
   white-space: nowrap; 
   font-size: 14rem;
   font-family: 'mr-rat';
-  text-align: center;
-  box-sizing: border-box;
+  text-align: justify;
+  margin: auto;
+  display: block;
   padding: 1rem 2rem;
   color: #10069F;
-  margin-top: 0rem;
-  margin-bottom: 3rem;
+
+  margin-bottom: 3rem; 
   letter-spacing: -2rem;
   z-index: 10;
       @media (max-width: 1024px) {
