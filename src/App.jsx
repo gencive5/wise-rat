@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import rat from './assets/ratfront.png'
 import './App.css'
 
@@ -6,6 +6,7 @@ function App() {
 
 // fortune telling
 const [fortune, setFortune] = useState("")
+const fortuneRef = useRef(null);
 
 
 const fortunes = [
@@ -17,31 +18,44 @@ const askFortune = () => {
   const randomFortune = fortunes[Math.floor(Math.random() * fortunes.length)];
   setFortune(randomFortune);
 }
+
+  if (fortuneRef.current) {
+    setTimeout(() => {
+      fortuneRef.current.scrollLeft = fortuneRef.current.scrollWidth;
+    }, 10);
+  }
+
   
 
   return (
     <>
     <container className="container">
-      <div className='main-content'>
-        <div className="rat-img">
+      <div className="rat-img">
           <img src={rat} className="base" width="200" height="210" alt="rat" />
         </div>
+      <div className='main-content'>
+        
         <div>
-          <p className="fortune1">{fortune}</p>
-          <p className="fortune2">{fortune}</p>
-     <button
-          type="button"
-          className="ask"
-          onClick={askFortune} 
-        >
-          Ask Mr Rat 
-      </button>
+          <div className="fortune-wrapper" ref={fortuneRef}>
+          <p className="fortune1">{fortune}</p></div>
+          
+    
         </div>
         </div>
        
 
 
       <section id="links">
+
+        <p className="fortune2">{fortune}</p>
+
+         <button
+          type="button"
+          className="ask"
+          onClick={askFortune} 
+        >
+          Ask Mr Rat 
+      </button>
   
           <ul>
             <li>
