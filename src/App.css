@@ -17,7 +17,7 @@
   overflow-x: visible;
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 2rem;
   overscroll-behavior: none;
 }
 
@@ -27,7 +27,7 @@
   align-items: center;
   justify-content: center;
   flex: 1; 
-  gap: 25px;
+  min-height: 0;
 }
 
 .ask {
