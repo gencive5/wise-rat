@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import rat from './assets/ratfront.png'
 import './App.css'
+import CustomHorizontalScrollbar from './CustomHorizontalScrollbar'
 
 function App() {
 
@@ -36,9 +37,15 @@ const askFortune = () => {
       <div className='main-content'>
         
         <div>
-          <div className="fortune-wrapper" ref={fortuneRef}>
-          <p className="fortune1">{fortune}</p></div>
-          
+          <div className="fortune-wrapper" ef={fortuneRef}
+            id="fortune-scrollable">
+          <p className="fortune1">{fortune}</p>
+          <CustomHorizontalScrollbar 
+            targetId="fortune-scrollable"
+            trackColor="#f2f2f2"
+            thumbColor="#e980fc"
+          />
+          </div>        
     
         </div>
         </div>
