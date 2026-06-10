@@ -113,26 +113,28 @@
   position: relative;
   margin-top: 5rem; 
   scrollbar-width: 100%;
-  scrollbar-color: #e980fc transparent; 
+  scrollbar-color: #e980fc #e980fc; 
   z-index: 50;
+  -webkit-overflow-scrolling: auto !important;
 }
 
 .fortune-wrapper::-webkit-scrollbar {
     -webkit-appearance: none;
+    -webkit-overflow-scrolling: auto !important;
 }
-/* 
+
 .fortune-wrapper::-webkit-scrollbar:vertical {
-    width: 11px;
-} */
+    width: 11px !important;
+}
 
 .fortune-wrapper::-webkit-scrollbar:horizontal {
-    height: 11px;
+    height: 11px !important;
 }
 
 .fortune-wrapper::-webkit-scrollbar-thumb {
     border-radius: 8px;
-    border: 1px solid magenta; /* should match background, can't be transparent */
-    background-color: magenta;
+    border: 1px solid magenta !important;
+    background-color: magenta !important;
 }
 
 
