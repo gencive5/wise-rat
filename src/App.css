@@ -113,12 +113,30 @@
   position: relative;
   margin-top: 5rem; 
   scrollbar-width: 100%;
-  scrollbar-color: magenta transparent;
+  scrollbar-color: #e980fc transparent; 
   z-index: 50;
 }
 
-/* Custom scrollbar styling (optional) */
 .fortune-wrapper::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+/* 
+.fortune-wrapper::-webkit-scrollbar:vertical {
+    width: 11px;
+} */
+
+.fortune-wrapper::-webkit-scrollbar:horizontal {
+    height: 11px;
+}
+
+.fortune-wrapper::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    border: 1px solid magenta; /* should match background, can't be transparent */
+    background-color: magenta;
+}
+
+
+/* .fortune-wrapper::-webkit-scrollbar {
   height: auto;
 }
 
@@ -134,7 +152,7 @@
 
 .fortune-wrapper::-webkit-scrollbar-thumb:hover {
   background: #574dec;
-}
+} */
 
 
 .fortune1 {
