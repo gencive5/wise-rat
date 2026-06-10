@@ -112,8 +112,8 @@
   overflow-y: visible;
   position: relative;
   margin-top: 5rem; 
-  scrollbar-width: 100%;
-  scrollbar-color: #e980fc #e980fc; 
+  /* scrollbar-width: 100%;
+  scrollbar-color: #e980fc #e980fc;  */
   z-index: 50;
   -webkit-overflow-scrolling: auto !important;
 }
@@ -135,6 +135,7 @@
     border-radius: 8px;
     border: 1px solid magenta !important;
     background-color: magenta !important;
+    box-shadow: 0 0 1px #e980fc !important;
 }
 
 
