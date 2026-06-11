@@ -31,8 +31,12 @@
   align-items: center !important;
 }
 
-/* .simplebar-content-wrapper {
+.simplebar-content-wrapper {
   overflow-x: auto !important;
   overflow-y: visible !important;
   scrollbar-width: auto !important;
+}
+
+/* .simplebar-offset {
+  right: 100rem;
 } */
