@@ -1,6 +1,8 @@
 import { useState, useEffect, useRef } from 'react'
 import rat from './assets/ratfront.png'
 import './App.css'
+import SimpleBar from 'simplebar-react'
+import 'simplebar-react/dist/simplebar.min.css'
 
 function App() {
 
@@ -19,11 +21,11 @@ const askFortune = () => {
   setFortune(randomFortune);
 }
 
-  if (fortuneRef.current) {
-    setTimeout(() => {
-      fortuneRef.current.scrollLeft = fortuneRef.current.scrollWidth;
-    }, 10);
-  }
+  // if (fortuneRef.current) {
+  //   setTimeout(() => {
+  //     fortuneRef.current.scrollLeft = fortuneRef.current.scrollWidth;
+  //   }, 10);
+  // }
 
   
 
@@ -36,9 +38,12 @@ const askFortune = () => {
       <div className='main-content'>
         
         <div>
-          <div className="fortune-wrapper" ef={fortuneRef}>
-          <p className="fortune1">{fortune}</p>
-          </div>        
+          {/* <div className="fortune-wrapper" ref={fortuneRef}> */}
+            <SimpleBar autoHide={false} style={{ width: '100vw' }} >
+            <p className="fortune1">{fortune}</p>
+        </SimpleBar>
+          
+          {/* </div>         */}
     
         </div>
         </div>
