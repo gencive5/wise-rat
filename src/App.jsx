@@ -3,6 +3,7 @@ import rat from './assets/ratfront.png'
 import './App.css'
 import SimpleBar from 'simplebar-react'
 import 'simplebar-react/dist/simplebar.min.css'
+import './simplebar.css'
 
 function App() {
 
@@ -21,11 +22,11 @@ const askFortune = () => {
   setFortune(randomFortune);
 }
 
-  // if (fortuneRef.current) {
-  //   setTimeout(() => {
-  //     fortuneRef.current.scrollLeft = fortuneRef.current.scrollWidth;
-  //   }, 10);
-  // }
+  if (fortuneRef.current) {
+    setTimeout(() => {
+      fortuneRef.current.scrollLeft = fortuneRef.current.scrollWidth;
+    }, 10);
+  }
 
   
 
@@ -38,12 +39,12 @@ const askFortune = () => {
       <div className='main-content'>
         
         <div>
-          {/* <div className="fortune-wrapper" ref={fortuneRef}> */}
-            <SimpleBar autoHide={false} style={{ width: '100vw' }} >
+          <div ref={fortuneRef}>
+            <SimpleBar autoHide={false} style={{ width: '100vw', height: 'auto'}} >
             <p className="fortune1">{fortune}</p>
         </SimpleBar>
           
-          {/* </div>         */}
+          </div>        
     
         </div>
         </div>

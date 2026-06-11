@@ -1,0 +1,38 @@
+
+.simplebar-scrollbar::before {
+  background-color: magenta !important;
+}
+
+.simplebar-scrollbar:hover::before {
+  background-color: #ff66ff !important;
+}
+
+.simplebar-track.simplebar-vertical {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.simplebar-track.simplebar-vertical {
+  width: 5px;
+}
+
+.simplebar-scrollbar::before {
+  border-radius: 10px;
+}
+
+.simplebar-content {
+  width: 100% !important;
+  padding: 3rem !important;
+  margin-top: 5rem !important;
+  position: relative !important;
+  z-index: 50 !important;
+  display: flex !important; 
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+/* .simplebar-content-wrapper {
+  overflow-x: auto !important;
+  overflow-y: visible !important;
+  scrollbar-width: auto !important;
+} */
