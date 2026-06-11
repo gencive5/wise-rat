@@ -1,7 +1,6 @@
 import { useEffect, useRef } from 'react';
 
 const CustomHorizontalScrollbar = ({ targetId, trackColor = "#f2f2f2", thumbColor = "#e980fc" }) => {
-  const scrollbarRef = useRef(null);
   const thumbRef = useRef(null);
   const targetElRef = useRef(null);
   const isDraggingRef = useRef(false);
@@ -15,13 +14,13 @@ const CustomHorizontalScrollbar = ({ targetId, trackColor = "#f2f2f2", thumbColo
     
     targetElRef.current = targetEl;
     
-    // Force hide native scrollbar and DISABLE vertical scroll
+    // Hide native scrollbar but keep scroll functionality
     targetEl.style.overflowX = "auto";
-    targetEl.style.overflowY = "hidden";  // ← CHANGE: Prevent vertical scroll
-    targetEl.style.scrollbarWidth = "none";
-    targetEl.style.msOverflowStyle = "none";
+    targetEl.style.overflowY = "hidden";
+    targetEl.style.scrollbarWidth = "none"; // Firefox
+    targetEl.style.msOverflowStyle = "none"; // IE/Edge
     
-    // Add style element to hide webkit scrollbar
+    // Add style to hide webkit scrollbar
     const styleId = `hide-scrollbar-${targetId}`;
     let styleEl = document.getElementById(styleId);
     if (!styleEl) {
@@ -31,7 +30,7 @@ const CustomHorizontalScrollbar = ({ targetId, trackColor = "#f2f2f2", thumbColo
         #${targetId} {
           scrollbar-width: none !important;
           -ms-overflow-style: none !important;
-          overflow-y: hidden !important; /* ← ADD THIS */
+          overflow-y: hidden !important;
         }
         #${targetId}::-webkit-scrollbar {
           display: none !important;
@@ -39,21 +38,16 @@ const CustomHorizontalScrollbar = ({ targetId, trackColor = "#f2f2f2", thumbColo
           height: 0 !important;
           background: transparent !important;
         }
-        #${targetId}::-webkit-scrollbar-track,
-        #${targetId}::-webkit-scrollbar-thumb,
-        #${targetId}::-webkit-scrollbar-button {
-          display: none !important;
-          width: 0 !important;
-          height: 0 !important;
-        }
       `;
       document.head.appendChild(styleEl);
     }
     
-    // Set initial thumb width after a small delay
-    setTimeout(() => {
+    const updateThumb = () => {
       updateThumbWidth();
-    }, 100);
+      moveThumb();
+    };
+    
+    setTimeout(updateThumb, 100);
     
     const handleScroll = () => {
       if (!isDraggingRef.current) {
@@ -68,7 +62,6 @@ const CustomHorizontalScrollbar = ({ targetId, trackColor = "#f2f2f2", thumbColo
     targetEl.addEventListener("scroll", handleScroll);
     window.addEventListener("resize", handleResize);
     
-    // Observe content changes
     const resizeObserver = new ResizeObserver(() => {
       updateThumbWidth();
     });
@@ -85,9 +78,9 @@ const CustomHorizontalScrollbar = ({ targetId, trackColor = "#f2f2f2", thumbColo
   }, [targetId]);
   
   const updateThumbWidth = () => {
-    if (!targetElRef.current || !scrollbarRef.current || !thumbRef.current) return;
+    if (!targetElRef.current || !thumbRef.current) return;
     
-    const trackWidth = scrollbarRef.current.offsetWidth;
+    const trackWidth = thumbRef.current.parentElement.offsetWidth;
     const targetWidth = targetElRef.current.clientWidth;
     const targetScrollWidth = targetElRef.current.scrollWidth;
     
@@ -97,17 +90,17 @@ const CustomHorizontalScrollbar = ({ targetId, trackColor = "#f2f2f2", thumbColo
     }
     
     thumbRef.current.style.display = 'block';
+    
     let thumbWidth = (targetWidth / targetScrollWidth) * trackWidth;
     thumbWidth = Math.max(thumbWidth, 30);
     thumbRef.current.style.width = `${thumbWidth}px`;
-    
-    moveThumb();
   };
   
   const moveThumb = () => {
-    if (!targetElRef.current || !scrollbarRef.current || !thumbRef.current) return;
+    if (!targetElRef.current || !thumbRef.current) return;
     
-    const trackWidth = scrollbarRef.current.offsetWidth;
+    const track = thumbRef.current.parentElement;
+    const trackWidth = track.offsetWidth;
     const thumbWidth = thumbRef.current.offsetWidth;
     const maxScrollLeft = targetElRef.current.scrollWidth - targetElRef.current.clientWidth;
     
@@ -117,20 +110,21 @@ const CustomHorizontalScrollbar = ({ targetId, trackColor = "#f2f2f2", thumbColo
     const maxThumbLeft = trackWidth - thumbWidth;
     const thumbLeft = scrollPercent * maxThumbLeft;
     
-    thumbRef.current.style.transform = `translateX(${thumbLeft}px)`;
+    thumbRef.current.style.left = `${thumbLeft}px`;
   };
   
   const handleMouseDown = (e) => {
     e.preventDefault();
     e.stopPropagation();
     
-    if (!targetElRef.current || !thumbRef.current || !scrollbarRef.current) return;
+    if (!targetElRef.current || !thumbRef.current) return;
     
     isDraggingRef.current = true;
     
     const startX = e.clientX;
     const startScrollLeft = targetElRef.current.scrollLeft;
-    const trackWidth = scrollbarRef.current.offsetWidth;
+    const track = thumbRef.current.parentElement;
+    const trackWidth = track.offsetWidth;
     const thumbWidth = thumbRef.current.offsetWidth;
     const maxThumbLeft = trackWidth - thumbWidth;
     const maxScrollLeft = targetElRef.current.scrollWidth - targetElRef.current.clientWidth;
@@ -157,14 +151,16 @@ const CustomHorizontalScrollbar = ({ targetId, trackColor = "#f2f2f2", thumbColo
   };
   
   const handleTrackClick = (e) => {
-    if (!targetElRef.current || !scrollbarRef.current || !thumbRef.current) return;
+    if (!targetElRef.current || !thumbRef.current) return;
     
+    // Don't trigger if clicking on thumb
     if (e.target === thumbRef.current) return;
     
-    const trackRect = scrollbarRef.current.getBoundingClientRect();
+    const track = thumbRef.current.parentElement;
+    const trackRect = track.getBoundingClientRect();
     const thumbWidth = thumbRef.current.offsetWidth;
     const clickX = e.clientX - trackRect.left;
-    const trackWidth = scrollbarRef.current.offsetWidth;
+    const trackWidth = track.offsetWidth;
     const maxScrollLeft = targetElRef.current.scrollWidth - targetElRef.current.clientWidth;
     
     const clickPosition = clickX - (thumbWidth / 2);
@@ -175,15 +171,14 @@ const CustomHorizontalScrollbar = ({ targetId, trackColor = "#f2f2f2", thumbColo
   
   return (
     <div 
-      ref={scrollbarRef}
       onClick={handleTrackClick}
       style={{
         width: 'calc(100% - 6rem)',
         margin: '0 auto',
         height: '7px',
         position: 'relative',
-        marginTop: '-7px',        // ← CHANGE: Pull it up so it overlays
-        marginBottom: '0',        // ← CHANGE: Remove bottom margin
+        marginTop: '-7px',
+        marginBottom: '0',
         borderRadius: '4px',
         backgroundColor: trackColor,
         cursor: 'pointer',
@@ -201,7 +196,7 @@ const CustomHorizontalScrollbar = ({ targetId, trackColor = "#f2f2f2", thumbColo
           top: 0,
           left: 0,
           cursor: 'grab',
-          transition: 'background-color 0.2s',
+          transition: 'background-color 0.2s, left 0.05s linear',
           minWidth: '30px'
         }}
         onMouseEnter={(e) => {
