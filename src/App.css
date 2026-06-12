@@ -148,14 +148,16 @@
   color: #10069F;
   background: transparent;
   padding: 5rem 2rem;
-  /* text-align: justify;
+  overflow-x: visible;
+
   margin: 0 auto;
   display: block;
   
   
  
-  box-shadow: 0 0 0 200px transparent;
-  overflow-x: visible;
+  /* box-shadow: 0 0 0 200px transparent;
+   text-align: justify;
+
   overflow-y: visible;
   letter-spacing: -2rem;
       @media (max-width: 1024px) {
@@ -163,7 +165,7 @@
     letter-spacing: -2rem;
     margin-left: -1rem;
   } */
-}
+} 
 
 
 .fortune2 {
