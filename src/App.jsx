@@ -32,7 +32,7 @@ const askFortune = () => {
 
   return (
     <>
-    <container className="container">
+    <div className="container">
       <div className="rat-img">
           <img src={rat} className="base" width="200" height="210" alt="rat" />
         </div>
@@ -77,7 +77,7 @@ const askFortune = () => {
           </ul>
         
       </section>
-      </container>
+      </div>
 
 
     </>
