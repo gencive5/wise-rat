@@ -104,7 +104,7 @@
   padding: 0 1rem 2rem 1rem;
 }
 }
-
+/* 
 .fortune-wrapper {
   width: 100%;
   height: auto;
@@ -135,33 +135,34 @@
   border-radius: 4px !important;
   height: 3px;
   background: #24bb5e !important;
-}
+} */
 
 
 
 .fortune1 {
   height: 14rem;
-  width: 100%;
+  /* width: 100%; */
   white-space: nowrap; 
   font-size: 14rem;
   font-family: 'mr-rat';
-  text-align: justify;
-  margin: auto;
-  display: block;
-  padding: 1rem 2rem;
   color: #10069F;
   background: transparent;
+  padding: 5rem 2rem;
+  /* text-align: justify;
+  margin: 0 auto;
+  display: block;
+  
+  
+ 
   box-shadow: 0 0 0 200px transparent;
   overflow-x: visible;
   overflow-y: visible;
-
-  margin-bottom: 3rem; 
   letter-spacing: -2rem;
       @media (max-width: 1024px) {
     font-size: 12rem;
     letter-spacing: -2rem;
     margin-left: -1rem;
-  }
+  } */
 }
 
 
