@@ -40,7 +40,7 @@ const askFortune = () => {
         
         <div>
           <div ref={fortuneRef}>
-            <SimpleBar autoHide={false} style={{ width: '100vw', height: 'auto'}} >
+            <SimpleBar autoHide={false} style={{ width: '100%', height: 'auto'}} >
             <p className="fortune1">{fortune}</p>
         </SimpleBar>
           

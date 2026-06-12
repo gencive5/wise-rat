@@ -8,7 +8,7 @@
 }
 
 .simplebar-track.simplebar-vertical {
-  background-color: #ff66ff (0, 0, 0, 0.1);
+  background-color: rgba(255, 102, 255, 0.1);
   border-radius: 4px;
 }
 
@@ -22,10 +22,10 @@
   max-height: none !important;
 }
 
-.simplebar-content-wrapper {
+/* .simplebar-content-wrapper {
   overflow-y: hidden !important;
   max-height: none !important;
-}
+} */
 
 .simplebar-content {
   overflow-y: visible !important;
@@ -38,7 +38,7 @@
   display: none !important;
 }
 
-.simplebar-content-wrapper {
+/* .simplebar-content-wrapper {
   scrollbar-color: magenta rgba(0, 0, 0, 0.1) !important;
   scrollbar-width: thin !important;
 }
@@ -46,4 +46,4 @@
 .simplebar-scrollbar {
   scrollbar-color: magenta rgba(0, 0, 0, 0.1) !important;
   scrollbar-width: thin !important;
-}
+} */
