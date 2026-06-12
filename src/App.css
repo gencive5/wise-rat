@@ -1,18 +1,6 @@
 @font-face {
-  font-family: "os-medium";
-  src: url("OpenSauceSans-Medium.woff2") format("woff2");
-  font-display: block;
-}
-
-@font-face {
-  font-family: "os-regular";
-  src: url("OpenSauceSans-Regular.woff2") format("woff2");
-  font-display: block;
-}
-
-@font-face {
-  font-family: "os-semibold";
-  src: url("OpenSauceSans-SemiBold.woff2") format("woff2");
+  font-family: "inter";
+  src: url("Inter-Medium.woff2") format("woff2");
   font-display: block;
 }
 
@@ -47,13 +35,13 @@
 
 .ask {
   font-size: 1.1rem;
-  font-family: 'os-medium', sans-serif;
+  font-family: 'inter', sans-serif;
   padding: 5px 10px;
   color: white;
   background: black;
   border: 2px solid transparent;
   transition: border-color 0.3s;
-  margin-bottom: 0rem;
+  margin-bottom: 2.5rem;
   margin-top: 1rem;
   align-items: flex-end;
   z-index: 300;
@@ -83,7 +71,7 @@
 
 #links {
   width: 100%;
-  padding: 0 20rem 2rem 20rem;
+  padding: 0 20rem 1rem 20rem;
   box-sizing: border-box;
 }
 
@@ -97,7 +85,7 @@
 
 #links a {
   color: #e980fc;
-  font-family: 'os-regular', sans-serif;
+  font-family: 'inter', sans-serif;
   font-size: 1rem;
   text-decoration: underline;
   white-space: nowrap;
@@ -183,7 +171,7 @@
 .fortune2 {
   height: 5rem;
   font-size: 1.5rem;
-  font-family: 'os-semibold', sans-serif;
+  font-family: 'inter', sans-serif;
   white-space: nowrap; 
   padding: 1rem 2rem;
   color: magenta;
