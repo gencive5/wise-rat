@@ -127,24 +127,12 @@
   box-shadow: 0 0 0 200px transparent;
   display: block;
   
-  
- 
-  /* box-shadow: 0 0 0 200px transparent;
-   text-align: justify;
-
-  overflow-y: visible;
-  letter-spacing: -2rem;
-      @media (max-width: 1024px) {
-    font-size: 12rem;
-    letter-spacing: -2rem;
-    margin-left: -1rem;
-  } */
 } 
 
 
 .fortune2 {
   height: 5rem;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-family: 'inter', sans-serif;
   white-space: nowrap; 
   padding: 1rem 2rem;

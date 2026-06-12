@@ -22,28 +22,15 @@
   max-height: none !important;
 }
 
-/* .simplebar-content-wrapper {
-  overflow-y: hidden !important;
-  max-height: none !important;
-} */
 
 .simplebar-content {
   overflow-y: visible !important;
   min-height: auto !important;
   width: 100vw;
+  box-shadow: 0 0 0 200px transparent;
 }
 
 
 .simplebar-track.simplebar-vertical {
   display: none !important;
 }
-
-/* .simplebar-content-wrapper {
-  scrollbar-color: magenta rgba(0, 0, 0, 0.1) !important;
-  scrollbar-width: thin !important;
-}
-
-.simplebar-scrollbar {
-  scrollbar-color: magenta rgba(0, 0, 0, 0.1) !important;
-  scrollbar-width: thin !important;
-} */
