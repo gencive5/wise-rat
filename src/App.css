@@ -29,7 +29,6 @@
   justify-content: center;
   flex: 1; 
   min-height: 0;
-  padding-top: 9vh;
 }
 
 .ask {
@@ -67,10 +66,16 @@
 }
 
 .rat-img .base {
-  width: 170px;
+  width: 190px;
   position: relative;
   z-index: 500;
   margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+.rat-img .base {
+  width: 160px;
+}
 }
 
 
@@ -124,7 +129,7 @@
   overflow-x: visible;
   letter-spacing: -2rem;
   margin: 0 auto;
-  box-shadow: 0 0 0 200px transparent;
+  box-shadow: 0 0 0 300px transparent;
   display: block;
   
 } 
@@ -137,8 +142,6 @@
   white-space: nowrap; 
   padding: 1rem 2rem;
   color: magenta;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
   position: relative;
   z-index: 200;
 }

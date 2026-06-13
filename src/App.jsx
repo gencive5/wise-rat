@@ -34,7 +34,7 @@ const askFortune = () => {
     <>
     <div className="container">
       <div className="rat-img">
-          <img src={rat} className="base" width="200" height="210" alt="rat" />
+          <img src={rat} className="base" alt="rat" />
         </div>
       <div className='main-content'>
         
@@ -43,6 +43,8 @@ const askFortune = () => {
             <SimpleBar autoHide={false} style={{ width: '100%', height: 'auto'}} >
             <p className="fortune1">{fortune}</p>
         </SimpleBar>
+        <p className="fortune2">{fortune}</p>
+      
           
           </div>        
     
@@ -53,7 +55,7 @@ const askFortune = () => {
 
       <section id="links">
 
-        <p className="fortune2">{fortune}</p>
+        
 
          <button
           type="button"
