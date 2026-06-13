@@ -125,7 +125,7 @@
   font-family: 'mr-rat';
   color: #10069F;
   background: transparent;
-  padding: 5rem;
+  padding: 4rem;
   overflow-x: visible;
   letter-spacing: -2rem;
   margin: 0 auto;
@@ -135,6 +135,12 @@
     0 0 50px transparent,
     0 0 70px transparent;
 } 
+
+@media (max-width: 1024px) {
+  .fortune1 {
+    font-size: 13rem;
+    height: 13rem;
+  }}
 
 
 .fortune2 {
