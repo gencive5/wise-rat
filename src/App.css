@@ -133,13 +133,6 @@
   display: block;
 } 
 
-@media (max-width: 1024px) {
-  .fortune1{
-  font-size: 15rem;
-  height: 15rem;
-}
-}
-
 
 .fortune2 {
   height: 5rem;
