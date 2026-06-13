@@ -133,6 +133,13 @@
   display: block;
 } 
 
+@media (max-width: 1024px) {
+  .fortune1{
+  font-size: 15rem;
+  height: 15rem;
+}
+}
+
 
 .fortune2 {
   height: 5rem;
@@ -141,7 +148,7 @@
   white-space: nowrap; 
   padding: 1rem 2rem;
   color: magenta;
-  top: 50%;
+  top: 65%;
   left: 50%;
   transform: translate(-50%, -50%);
   position: absolute;

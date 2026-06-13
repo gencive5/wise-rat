@@ -1,15 +1,17 @@
 
 .simplebar-scrollbar::before {
   background-color: #ff66ff !important;
+  border-radius: 0px;
 }
 
 .simplebar-scrollbar:hover::before {
   background-color: #ff66ff !important;
+  border-radius: 0px;
 }
 
 .simplebar-track.simplebar-vertical {
   background-color: rgba(255, 102, 255, 0.1);
-  border-radius: 4px;
+  border-radius: 0px;
 }
 
 
