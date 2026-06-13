@@ -1,6 +1,6 @@
 
 .simplebar-scrollbar::before {
-  background-color: magenta !important;
+  background-color: #ff66ff !important;
 }
 
 .simplebar-scrollbar:hover::before {
@@ -17,6 +17,7 @@
   height: auto !important;
   width: 100vw;
   box-shadow: 0 0 0 300px transparent;
+  overflow-y: visible;
 }
 
 .simplebar-mask {
@@ -28,7 +29,7 @@
   overflow-y: visible !important;
   min-height: auto !important;
   width: 100vw;
-  box-shadow: 0 0 0 200px transparent;
+  box-shadow: 0 0 0 300px transparent;
 }
 
 
