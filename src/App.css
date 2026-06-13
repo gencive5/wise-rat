@@ -18,7 +18,7 @@
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   overscroll-behavior: none;
 }
 
@@ -74,7 +74,7 @@
 
 @media (max-width: 1024px) {
 .rat-img .base {
-  width: 160px;
+  width: 150px;
 }
 }
 
@@ -125,7 +125,7 @@
   font-family: 'mr-rat';
   color: #10069F;
   background: transparent;
-  padding: 5rem 2rem;
+  padding: 3rem;
   overflow-x: visible;
   letter-spacing: -2rem;
   margin: 0 auto;
